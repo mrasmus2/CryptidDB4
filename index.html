@@ -70,6 +70,15 @@
       .container ul {
         color: #ddd;
       }
+      .navbar-icons {
+        width: 25px;
+        height: 25px;
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .active {
+        background-color: white;
 
       /* Navigation arrows */
       .prev,
@@ -113,6 +122,38 @@
           title="Toggle Navigation Menu"
           ><i class="fa fa-bars"></i
         ></a>
+        <a href="#"
+          ><img src="construction.png" alt="Home" class="navbar-icons active"
+        /></a>
+        <a href="./pages/database/database.html"
+          ><img src="database.png" alt="Home" class="navbar-icons"
+        /></a>
+        <a href="./pages/forum/forum.html"
+          ><img src="chat.png" alt="Home" class="navbar-icons"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top: 46px"
+    >
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a
+        href="./pages/database/database.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        >Database</a
+      >
+      <a
+        href="./pages/forum/forum.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        >Forums</a
+      >
+    </div>
+
+    <!-- Automatic Slideshow Images -->
         <a
           href="#"
           class="w3-bar-item w3-button w3-padding-large active"

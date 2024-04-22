@@ -42,7 +42,7 @@
       }
 
       .like-button.clicked {
-        background-color: red; /* Set the background color when clicked */
+        background-color: green; /* Set the background color when clicked */
       }
 
       .overlay {
@@ -76,7 +76,7 @@
       }
 
       .info-button.clicked {
-        background-color: red; /* Set the background color when clicked */
+        background-color: green; /* Set the background color when clicked */
       }
 
       body {
@@ -85,6 +85,19 @@
       }
       .mySlides {
         display: none;
+      }
+      .navbar-icons {
+        width: 25px;
+        height: 25px;
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .active {
+        background-color: white;
+      }
+      .like-button.clicked .glyphicon glyphicon-thumbs-up {
+        background-color: #00cc00;
       }
     </style>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -100,43 +113,50 @@
 
   <body>
     <!-- Navbar -->
-   <div class="w3-top">
-    <div class="w3-bar w3-black w3-card">
-      <a
-        class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-        href="javascript:void(0)"
-        onclick="myFunction()"
-        title="Toggle Navigation Menu"
-        ><i class="fa fa-bars"></i
-      ></a>
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card">
+        <a
+          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0)"
+          onclick="myFunction()"
+          title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="../../../index.html"
+          ><img src="../../../construction.png" alt="Home" class="navbar-icons"
+        /></a>
+        <a href="../database.html"
+          ><img
+            src="../../../database.png"
+            alt="Home"
+            class="navbar-icons active"
+        /></a>
+        <a href="../../forum/forum.html"
+          ><img src="../../../chat.png" alt="Home" class="navbar-icons"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top: 46px"
+    >
       <a
         href="../../../index.html"
-        class="w3-bar-item w3-button w3-padding-large active"
-        title="Go to the homepage"
+        class="w3-bar-item w3-button w3-padding-large"
         >HOME</a
       >
-      <a
-        href="../database.html"
-        class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-        title="Explore the cryptid database"
+      <a href="../database.html" class="w3-bar-item w3-button w3-padding-large"
         >Database</a
       >
       <a
         href="../../forum/forum.html"
-        class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-        title="Join discussions about cryptids"
+        class="w3-bar-item w3-button w3-padding-large"
         >Forums</a
       >
     </div>
-  </div>
-
-  <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-<a href="../../../index.html" class="w3-bar-item w3-button w3-padding-large" >HOME</a>
-<a href="../database.html" class="w3-bar-item w3-button w3-padding-large" >Database</a>
-<a href="../../forum/forum.html" class="w3-bar-item w3-button w3-padding-large" >Forums</a>
-</div>
-
 
     <div class="container">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -168,6 +188,7 @@
                   <button
                     type="button"
                     class="btn btn-default btn-circle like-button"
+                    onclick="like(this)"
                   >
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                   </button>
@@ -201,6 +222,7 @@
                   <button
                     type="button"
                     class="btn btn-default btn-circle like-button"
+                    onclick="like(this)"
                   >
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                   </button>
@@ -234,6 +256,7 @@
                   <button
                     type="button"
                     class="btn btn-default btn-circle like-button"
+                    onclick="like(this)"
                   >
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                   </button>
@@ -267,6 +290,7 @@
                   <button
                     type="button"
                     class="btn btn-default btn-circle like-button"
+                    onclick="like(this)"
                   >
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                   </button>
@@ -300,6 +324,7 @@
                   <button
                     type="button"
                     class="btn btn-default btn-circle like-button"
+                    onclick="like(this)"
                   >
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                   </button>
@@ -333,6 +358,7 @@
                   <button
                     type="button"
                     class="btn btn-default btn-circle like-button"
+                    onclick="like(this)"
                   >
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                   </button>
@@ -378,6 +404,9 @@
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
       });
+      function like(button) {
+        button.classList.toggle("clicked");
+      }
     </script>
   </body>
 </html>
